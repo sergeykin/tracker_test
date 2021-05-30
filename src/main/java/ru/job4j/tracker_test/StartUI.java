@@ -6,13 +6,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class StartUI {
 
+    @Autowired
     private Store store;
+    @Autowired
     private ConsoleInput consoleInput;
 
-    public StartUI(Store store, ConsoleInput consoleInput) {
-        this.store = store;
-        this.consoleInput = consoleInput;
-    }
+//    public StartUI(Store store, ConsoleInput consoleInput) {
+//        this.store = store;
+//        this.consoleInput = consoleInput;
+//    }
 
     public void add() {
         store.add(consoleInput.askStr());
